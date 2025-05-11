@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>滑动拼图验证</title>
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+    <div class="verification-card">
+        <h2 class="verification-title">滑动拼图验证</h2>
+        <p class="verification-instruction">拖动滑块将拼图放入空缺位置</p>
+        
+        <div class="verification-image-container">
+            <img id="verification-image" class="verification-image" src="https://picsum.photos/300/180?random=1" alt="验证图片需要网络，请检查网络连接或刷新后重试">
+            <div id="verification-puzzle" class="verification-puzzle"></div>
+            <div id="verification-target" class="verification-target"></div>
+        </div>
+        
+        <div class="verification-track">
+            <div id="track-progress" class="track-progress"></div>
+            <div id="track-thumb" class="track-thumb">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="#666"/>
+                </svg>
+            </div>
+            <div class="track-text">向右滑动完成验证</div>
+            <div id="track-success" class="track-success">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+                </svg>
+            </div>
+        </div>
+        
+        <div id="verification-result" class="verification-result"></div>
+        <button id="refresh-button" class="refresh-button">刷新验证</button>
+    </div>
+
+    <script src="js/slider.js"></script>
+</body>
+</html>

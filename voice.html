@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>语音验证码</title>
+    <link rel="stylesheet" href="css/voice.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <div class="captcha-header">
+            <h2>语音验证码</h2>
+            <p>请听取音频并输入验证码</p>
+        </div>
+        
+        <div class="attempts-counter" id="attemptsCounter">
+            剩余尝试次数: 3
+        </div>
+        
+        <div class="audio-control">
+            <button id="playButton">▶</button>
+            <div class="audio-visualizer" id="visualizer"></div>
+        </div>
+        
+        <input type="text" id="userInput" class="captcha-input" placeholder="请输入听到的验证码" maxlength="6">
+        
+        <div class="captcha-buttons">
+            <button id="refreshBtn">换一个</button>
+            <button id="submitBtn">验证</button>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="js/voice.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    touch-action: manipulation;
+}
+.verification-card {
+    width: 90%;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.verification-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.verification-instruction {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.verification-image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.verification-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verification-puzzle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.verification-target {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px dashed #4CAF50;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.verification-track {
+    width: 100%;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.track-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    width: 0;
+    transition: width 0.2s;
+}
+
+.track-thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    touch-action: none;
+}
+
+.track-text {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.track-success {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #4CAF50;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.verification-result {
+    text-align: center;
+    font-size: 16px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    height: 24px;
+}
+
+.refresh-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 25px;
+    color: #666;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}

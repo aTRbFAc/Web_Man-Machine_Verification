@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>移动端验证码</title>
+    <link rel="stylesheet" href="css/twisting.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <div class="captcha-header">
+            <h2>验证码验证</h2>
+            <p>请输入下方显示的验证码</p>
+        </div>
+        
+        <div class="captcha-image-container">
+            <div id="captchaImage"></div>
+        </div>
+        
+        <input type="text" id="userInput" class="captcha-input" placeholder="请输入验证码" maxlength="6">
+        
+        <div class="captcha-buttons">
+            <button id="refreshBtn">刷新</button>
+            <button id="submitBtn">提交</button>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="js/twisting.js"></script>
+</body>
+</html>

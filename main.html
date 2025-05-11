@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>我不是机器人</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="about-btn" id="about-btn">关于</button>
+    <div class="home-container">
+        
+        <h1 class="game-title">我不是机器人</h1>
+        
+        <p class="game-description">
+            失败时会有机器人嘲讽你，成功时则收货人类专属的成就感！
+        </p>
+        <div class="game-options">
+            <div class="game-card" onclick="window.location.href='block.html'">
+                <div class="game-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3 class="game-name">图片验证码</h3>
+                <p class="game-desc">从多张图片中找出所有符合要求的图片</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='angle.html'">
+                <div class="game-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3 class="game-name">滑块验证码</h3>
+                <p class="game-desc">拖动滑块完成图片旋转验证</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='twisting.html'">
+                <div class="game-icon">
+                    <i class="fas fa-keyboard"></i>
+                </div>
+                <h3 class="game-name">图像验证码</h3>
+                <p class="game-desc">输入显示的扭曲文字</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='click.html'">
+                <div class="game-icon">
+                    <i class="fas fa-mouse-pointer"></i>
+                </div>
+                <h3 class="game-name">点击验证码</h3>
+                <p class="game-desc">按照提示点击特定区域</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='voice.html'">
+                <div class="game-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3 class="game-name">语音验证码</h3>
+                <p class="game-desc">听取并输入听到的数字</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+            
+            <div class="game-card" onclick="window.location.href='slider.html'">
+                <div class="game-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3 class="game-name">拼图验证码</h3>
+                <p class="game-desc">拖动滑块完成图片拼图验证</p>
+                <button class="play-button">开始挑战</button>
+            </div>
+        </div>
+    </div>    
+    <div class="about-popup" id="about-popup">
+        <button class="about-close-btn" id="about-close-btn">×</button>
+        <h2>关于游戏</h2>
+        <p><strong>游戏名称：</strong>我不是机器人</p>
+        <p><strong>游戏类型：</strong>休闲、模拟类</p>
+        <p><strong>游戏简介：</strong>《我不是机器人》——用多种验证码挑战你的“人类资格”，通关失败？那你可能是AI！</p>
+        <br>
+        <p><strong>注意事项：</strong></p>
+        <ul>
+            <li>《图片验证码》采用emoji表情来表示物品，有些机型的emoji表情库不是最新，或部分emoji残缺可能导致显示会有误差和问题</li>
+        </ul>
+        <br>
+        <p><strong>版本：</strong>1.0.0</p>
+        <p><strong>开发者：</strong>文幻工作室</p>
+        <p><strong>QQ交流群：</strong>981642484</p>
+        <p><strong>官网：</strong>https://atrbfac.github.io/DreamInk-Studio/</p>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/svtools.js"></script>
+    <script src="js/aboutUpdate.js"></script>
+<script>
+    if (webapp.bestow()) {
+} else {
+    webapp.rights();
+}
+//判断存储权限
+    rnsys.auto()
+ // 添加关于弹窗的控制
+ document.getElementById('about-btn').addEventListener('click', function() {
+                document.getElementById('about-popup').style.display = 'block';
+            });
+            
+            document.getElementById('about-close-btn').addEventListener('click', function() {
+                document.getElementById('about-popup').style.display = 'none';
+            });
+</script>    
+</body>
+</html>

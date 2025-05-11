@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>点击验证码</title>
+    <link rel="stylesheet" href="css/click.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <div class="captcha-header">
+            <h2>点击验证码</h2>
+            <p>请按照提示点击图片中的文字</p>
+        </div>
+        
+        <div class="captcha-instruction" id="instruction">
+            请点击图片中的"加载中..."字样
+        </div>
+        
+        <div class="captcha-image-container">
+            <canvas id="captchaCanvas"></canvas>
+            <div class="target-word" id="targetWord"></div>
+        </div>
+        
+        <div class="captcha-buttons">
+            <button id="refreshBtn">换一张</button>
+            <button id="submitBtn">验证</button>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="js/click.js"></script>
+</body>
+</html>

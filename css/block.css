@@ -1,0 +1,250 @@
+/* 基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 游戏容器 */
+.game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 95%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+/* 头部信息 */
+.header {
+    margin-bottom: 15px;
+}
+
+.level-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.target {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+/* 图块容器 */
+.tile-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* 图块样式 */
+.tile {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.tile:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tile.selected {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+}
+
+.tile.selected::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 16px;
+}
+
+/* 按钮组 */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.skip {
+    background-color: #f44336;
+}
+
+.skip:hover {
+    background-color: #d32f2f;
+}
+
+/* 统计信息 */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    gap: 10px;
+}
+
+.stats i {
+    margin-right: 5px;
+}
+
+/* 主页按钮 */
+.home-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #2980b9;
+}
+
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.modal-icon.failure {
+    color: #f44336;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.modal-message {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.modal-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.modal-button:hover {
+    background-color: #45a049;
+}
+
+/* 响应式调整 */
+@media (max-width: 400px) {
+    .tile {
+        font-size: 2rem;
+    }
+    
+    .button, .home-button {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-height: 700px) {
+    .game-container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .tile {
+        font-size: 2rem;
+    }
+}
