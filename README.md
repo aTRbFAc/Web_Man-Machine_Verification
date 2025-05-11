@@ -12,7 +12,7 @@ git clone https://github.com/aTRbFAc/Web_Man-Machine_Verification.git
 # 进入目录
 cd 项目文件夹
 
-# 直接打开index.html或使用本地服务器
+# 直接打开main.html或使用本地服务器
 python -m http.server 8000
 ```
 访问：http://localhost:8000
